@@ -1,0 +1,7 @@
+# User and booking data
+storage/users.json
+storage/bookings.json
+storage/profile-photos/
+
+# Local environment
+.env
