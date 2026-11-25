@@ -1,7 +1,7 @@
-# User and booking data
-storage/users.json
-storage/bookings.json
-storage/profile-photos/
+# Local user and booking data
+app/storage/users.json
+app/storage/bookings.json
+app/storage/profile-photos/
 
-# Local environment
+# Environment variables
 .env
