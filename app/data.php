@@ -6,7 +6,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 date_default_timezone_set('Asia/Jakarta');
 
 // Folder project di Laragon (dipakai untuk redirect dan path aset di halaman admin).
-const BASE_URL = '/warnet';
+const BASE_URL = '';
 
 const BOOKING_TIMES    = [
   '00:00', '01:00', '02:00', '03:00', '04:00', '05:00',
