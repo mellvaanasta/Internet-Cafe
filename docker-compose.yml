@@ -1,3 +1,4 @@
+
 services:
   php:
     build: .
@@ -5,14 +6,19 @@ services:
       - "8080:80"
     volumes:
       - ./app:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_NAME: ${DB_NAME:-netzone}
+      DB_USER: ${DB_USER:-root}
+      DB_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD is required}
     depends_on:
       - db
 
   db:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: netzone
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD is required}
+      MYSQL_DATABASE: ${DB_NAME:-netzone}
     ports:
       - "3307:3306"
     volumes:
